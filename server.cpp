@@ -32,22 +32,22 @@ int main(){
      exit(EXIT_FAILURE);
    }
    // Grab thnnection from queue 
-   auto addrlen = sizeof(sockaddr);
-   int connection = accept(sockets,(struct sockaddr*)&sockaddr.(socklen_t*)&addrlen);
-   if(connection < 0){
+  auto addrlen = sizeof(sockaddr);
+  int connection = accept(sockets,(struct sockaddr*)&sockaddr.(socklen_t*)&addrlen);
+  if(connection < 0){
 
      cout<<Failed to grab the connection erron :"<< erron <<endl;
      exit(EXIT_FAILURE);
    }
    // read from the buffer 
-   char buffer[100];
-   auto bytesRead = read(connection , buffer,100);
-   cout<<"the message was: "<< buffer <<endl; 
+  char buffer[100];
+  auto bytesRead = read(connection , buffer,100);
+     cout<<"the message was: "<< buffer <<endl; 
    // send a message 
-   string respond = "hey there nice to have you\n";
-   send(connection. respond.c_str(),respond.size(),0);
+  string respond = "hey there nice to have you\n";
+  send(connection. respond.c_str(),respond.size(),0);
 
    // close the connectioo
-   close(connection);
-   close(sockets);
+  close(connection);
+  close(sockets);
   }
